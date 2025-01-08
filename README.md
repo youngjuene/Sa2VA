@@ -1,6 +1,6 @@
 # Sa2VA: Marrying SAM2 with LLaVA for Dense Grounded Understanding of Images and Videos
 
-[\[🏠 Sa2VA\]](https://lxtgh.github.io/project/sa2va)  [\[📜 arXiv\]]() [\[🤗 Model\]](https://huggingface.co/ByteDance/Sa2VA) [\[🎥 Introduction\]]() [\[🧑‍💻 GitHub\]](https://github.com/magic-research/Sa2VA)
+[\[🏠 Sa2VA\]](https://lxtgh.github.io/project/sa2va)  [\[📜 arXiv\]](https://arxiv.org/abs/2501.04001) [\[🤗 Model\]](https://huggingface.co/ByteDance/Sa2VA-4B) [\[🎥 Introduction\]]() [\[🧑‍💻 GitHub\]](https://github.com/magic-research/Sa2VA)
 
 ![Teaser](assets/images/teaser.jpg)
 
@@ -16,6 +16,44 @@ We provide the following models:
 |  Sa2VA-1B  | [InternVL2.5-1B](https://huggingface.co/OpenGVLab/InternVL2_5-1B) |   [Qwen2.5-0.5B-Instruct](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct)    | [🤗 link](https://huggingface.co/ByteDance/Sa2VA-1B) |
 |  Sa2VA-4B  | [InternVL2.5-4B](https://huggingface.co/OpenGVLab/InternVL2_5-4B) |    [Qwen2.5-3B-Instruct](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct)     | [🤗 link](https://huggingface.co/ByteDance/Sa2VA-4B) |
 |  Sa2VA-8B  | [InternVL2.5-8B](https://huggingface.co/OpenGVLab/InternVL2_5-8B) |  [internlm2_5-7b-chat](https://huggingface.co/internlm/internlm2_5-7b-chat)   | [🤗 link](https://huggingface.co/ByteDance/Sa2VA-8B) |
+
+
+## Demo
+
+<details open>
+<summary>Demo 1</summary>
+Input Video (Source: La La Land 2016):
+
+![Error](assets/videos/exp_1_img.gif)
+
+Instruction: "Please segment the girl wearing the yellow dress."
+
+![Error](assets/videos/exp_1_vis.gif)
+</details>
+
+<details open>
+<summary>Demo 2</summary>
+Input Video:
+
+![Error](assets/videos/exp_2_img.gif)
+
+Instruction: "Please segment the main character."
+
+![Error](assets/videos/exp_2_vis.gif)
+</details>
+
+<details open>
+<summary>Demo 3</summary>
+Input Video:
+
+![Error](assets/videos/gf_exp1.gif)
+
+Instruction: "What is the atmosphere of the scene?"
+
+Answer: "The scene has a dark and mysterious atmosphere, with the men dressed in suits and ties, and the dimly lit room."
+</details>
+
+
 
 ## Training
 <details>
