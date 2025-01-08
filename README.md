@@ -18,6 +18,26 @@ We provide the following models:
 |  Sa2VA-8B  | [InternVL2.5-8B](https://huggingface.co/OpenGVLab/InternVL2_5-8B) |  [internlm2_5-7b-chat](https://huggingface.co/internlm/internlm2_5-7b-chat)   | [🤗 link](https://huggingface.co/ByteDance/Sa2VA-8B) |
 
 
+## Quick Start
+
+Our Sa2VA model is available on 🤗HuggingFace. With very few steps, you can try it with your own data. You can install the `demo/requirements.txt` to avoid training-only packages.
+
+
+**Option1 - scripts:**
+
+Supposing you have a folder (`PATH_TO_FOLDER`) that contains images of a video, you can use the following script to chat with the Sa2VA model or segment the objects in the videos.
+
+```bash
+> cd scripts
+> python demo.py PATH_TO_FOLDER --model_path ByteDance/Sa2VA-8B --work-dir OUTPUT_DIR --text "<image>Please describe the video content."
+```
+
+If the output contains the segmentation results, the results will be saved to `OUTPUT_DIR`.
+
+**Option2 - Jupter Notebook:**
+
+Please refer to `demo.ipynb`.
+
 ## Demo
 
 <details open>
@@ -86,7 +106,7 @@ You are expected to download the following pretrained models and place them in t
 
 </details>
 
-<details>
+<details open>
 <summary>Data Preparation</summary>
 
 (TODO) Please download the training datasets and place them in the `data` directory. The download link is [here](https://huggingface.co/datasets/Dense-World/Sa2VA-Training).
