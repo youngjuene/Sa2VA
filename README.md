@@ -56,7 +56,7 @@ Answer: "The scene has a dark and mysterious atmosphere, with the men dressed in
 
 
 ## Training
-<details>
+<details open>
 <summary>Installation</summary>
 
 1. Please install the python and pytorch first:
@@ -77,7 +77,7 @@ Answer: "The scene has a dark and mysterious atmosphere, with the men dressed in
 ```
 </details>
 
-<details>
+<details open>
 <summary>Pretrained Model Preparation</summary>
 
 You are expected to download the following pretrained models and place them in the `./pretrained` directory:
@@ -94,7 +94,7 @@ You are expected to download the following pretrained models and place them in t
 </details>
 
 
-<details>
+<details open>
 <summary>Training Script</summary>
 
 Please run the following script to train:
