@@ -1,6 +1,6 @@
 # Sa2VA: Marrying SAM2 with LLaVA for Dense Grounded Understanding of Images and Videos
 
-[\[🏠 Sa2VA\]](https://lxtgh.github.io/project/sa2va)  [\[📜 arXiv\]]() [\[🤗 Model\]](https://huggingface.co/ByteDance/Sa2VA-4B) [\[🎥 Introduction\]]() [\[🧑‍💻 GitHub\]](https://github.com/magic-research/Sa2VA)
+[\[🏠 Sa2VA\]](https://lxtgh.github.io/project/sa2va)  [\[📜 arXiv\]](https://arxiv.org/abs/2501.04001) [\[🤗 Model\]](https://huggingface.co/ByteDance/Sa2VA-4B) [\[🎥 Introduction\]]() [\[🧑‍💻 GitHub\]](https://github.com/magic-research/Sa2VA)
 
 ![Teaser](assets/images/teaser.jpg)
 
