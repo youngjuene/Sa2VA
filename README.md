@@ -83,6 +83,29 @@ Answer: "The scene has a dark and mysterious atmosphere, with the men dressed in
 </details>
 
 
+<details open>
+<summary>Demo 4</summary>
+Input Video (Source: Internet):
+
+![Error](assets/videos/exp_apt_1.gif)
+
+Instruction: "Please segment the person wearing sun glasses."
+
+![Error](assets/videos/exp_apt_1_vis.gif)
+</details>
+
+
+<details open>
+<summary>Demo 5</summary>
+Input Video (Source: Internet):
+
+![Error](assets/videos/exp_apt_2.gif)
+
+Instruction: "Instruction: "Please segment the singing girl."
+
+![Error](assets/videos/exp_apt_2_vis.gif)
+</details>
+
 
 ## Training
 <details open>
