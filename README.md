@@ -59,33 +59,28 @@ Please refer to `demo.ipynb`.
 <summary>Demo 1</summary>
 Input Video (Source: La La Land 2016):
 
-![Error](assets/videos/exp_1_img.gif)
+![Error](assets/videos/exp_1.gif)
 
 Instruction: "Please segment the girl wearing the yellow dress."
-
-![Error](assets/videos/exp_1_vis.gif)
 </details>
 
 <details open>
 <summary>Demo 2</summary>
-Input Video:
+Input Video (Source: La La Land 2016):
 
-![Error](assets/videos/exp_2_img.gif)
+![Error](assets/videos/exp_2.gif)
 
 Instruction: "Please segment the main character."
-
-![Error](assets/videos/exp_2_vis.gif)
 </details>
+
 
 <details open>
 <summary>Demo 3</summary>
-Input Video:
+Input Video (Source: Internet):
 
-![Error](assets/videos/gf_exp1.gif)
+![Error](assets/videos/apt_exp_1_all.gif)
 
-Instruction: "What is the atmosphere of the scene?"
-
-Answer: "The scene has a dark and mysterious atmosphere, with the men dressed in suits and ties, and the dimly lit room."
+Instruction: "Please segment the person wearing sun glasses."
 </details>
 
 
@@ -93,23 +88,20 @@ Answer: "The scene has a dark and mysterious atmosphere, with the men dressed in
 <summary>Demo 4</summary>
 Input Video (Source: Internet):
 
-![Error](assets/videos/exp_apt_1.gif)
+![Error](assets/videos/apt_exp_2_all.gif)
 
-Instruction: "Please segment the person wearing sun glasses."
-
-![Error](assets/videos/exp_apt_1_vis.gif)
+Instruction: "Instruction: "Please segment the singing girl."
 </details>
-
 
 <details open>
 <summary>Demo 5</summary>
-Input Video (Source: Internet):
+Input Video:
 
-![Error](assets/videos/exp_apt_2.gif)
+![Error](assets/videos/gf_exp1.gif)
 
-Instruction: "Instruction: "Please segment the singing girl."
+Instruction: "What is the atmosphere of the scene?"
 
-![Error](assets/videos/exp_apt_2_vis.gif)
+Answer: "The scene has a dark and mysterious atmosphere, with the men dressed in suits and ties, and the dimly lit room."
 </details>
 
 
