@@ -26,6 +26,12 @@ We provide the following models:
 |  Sa2VA-4B  | [InternVL2.5-4B](https://huggingface.co/OpenGVLab/InternVL2_5-4B) |    [Qwen2.5-3B-Instruct](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct)     | [🤗 link](https://huggingface.co/ByteDance/Sa2VA-4B) |
 |  Sa2VA-8B  | [InternVL2.5-8B](https://huggingface.co/OpenGVLab/InternVL2_5-8B) |  [internlm2_5-7b-chat](https://huggingface.co/internlm/internlm2_5-7b-chat)   | [🤗 link](https://huggingface.co/ByteDance/Sa2VA-8B) |
 
+## Gradio Demos
+
+We provide a script that implements interactive chat using gradio, which requires installing `gradio==4.42.0`. You can try it to quickly build a chat interface locally.
+```shell
+PYTHONPATH=. python projects/llava_sam2/gradio/app.py ByteDance/Sa2VA-4B
+```
 
 ## Quick Start
 
