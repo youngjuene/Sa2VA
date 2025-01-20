@@ -15,9 +15,9 @@
 
 ## Opensource progress
 
-- [ ] Release Open-sourced training datasets.
+- [x] Release Open-sourced training datasets.
 - [ ] Release Ref-SAM-v dataset.
-- [ ] Release evaluation code for each dataset. 
+- [x] Release evaluation code for each dataset. 
 - [x] Release 1B,4B,8B, 26B model.
 - [x] Release training code.
 - [x] Release inference and test code.
