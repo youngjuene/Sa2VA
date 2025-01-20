@@ -41,14 +41,14 @@ We provide the following models:
 |  Sa2VA-8B  | [InternVL2.5-8B](https://huggingface.co/OpenGVLab/InternVL2_5-8B) |  [internlm2_5-7b-chat](https://huggingface.co/internlm/internlm2_5-7b-chat)   | [🤗 link](https://huggingface.co/ByteDance/Sa2VA-8B) |
 |  Sa2VA-26B | [InternVL2.5-26B](https://huggingface.co/OpenGVLab/InternVL2_5-26B) |  [internlm2_5-7b-chat](https://huggingface.co/internlm/internlm2_5-20b-chat)   | [🤗 link](https://huggingface.co/ByteDance/Sa2VA-26B) |
 
-## Gradio Demos
+## 🤗 Gradio Demos
 
 We provide a script that implements interactive chat using gradio, which requires installing `gradio==4.42.0`. You can try it to build a local chat interface quickly.
 ```shell
 PYTHONPATH=. python projects/llava_sam2/gradio/app.py ByteDance/Sa2VA-4B
 ```
 
-## Quick Start
+## 🚀 Quick Start
 
 Our Sa2VA model is available on 🤗HuggingFace. With very few steps, you can try it with your own data. You can install the `demo/requirements.txt` to avoid training-only packages.
 
@@ -68,7 +68,7 @@ If the output contains the segmentation results, the results will be saved to `O
 
 Please refer to `demo.ipynb`.
 
-## Demo
+## 🎥 Demo
 
 <details open>
 <summary>Demo 1</summary>
@@ -154,8 +154,32 @@ You are expected to download the following pretrained models and place them in t
 <details open>
 <summary>Data Preparation</summary>
 
-(TODO) Please download the training datasets and place them in the `data` directory. The download link is [here](https://huggingface.co/datasets/Dense-World/Sa2VA-Training).
+Please download the training datasets and place them in the `data` directory. The download link is [here](https://huggingface.co/datasets/Dense-World/Sa2VA-Training).
 
+Please directly put the zip files into the `data` directory and unzip them. For example, you can download the `video_datas_mevis.zip` and unzip it in the `data` directory like:
+```bash
+> unzip video_datas_mevis.zip
+```
+
+The final data structure should be like:
+```
+data/
+├── video_datas
+|   ├── revos
+|   ├── mevis
+|   ├── revos
+|   └── davis17
+├── glamm_data
+|   ├── images
+|   ├── annotations
+├── osprey-724k
+|   ├── Osprey-724K
+|   ├── coco
+├── llava_data
+|   ├── llava_images
+|   ├── LLaVA-Instruct-150K
+|   ├── LLaVA-Pretrain
+```
 </details>
 
 

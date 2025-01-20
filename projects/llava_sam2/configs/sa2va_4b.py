@@ -113,22 +113,21 @@ model = dict(
 #                      PART 3  Dataset & Dataloader                   #
 #######################################################################
 
-
-VIDEO_DATAS = './data/video_datas/'
-IMG_DATAS = './data/image_datas/'
+DATA_ROOT = './data/'
+VIDEO_DATA_ROOT = DATA_ROOT + 'video_datas/'
 
 ############### video res
-data_root_revos = './data/video_datas/revos/'
+data_root_revos = VIDEO_DATA_ROOT + 'revos/'
 video_revos_image_folder = data_root_revos
 video_revos_expression_file = data_root_revos + 'meta_expressions_train_.json'
 video_revos_mask_file = data_root_revos + 'mask_dict.json'
 
-data_root_mevis = './data/video_datas/mevis/train/'
+data_root_mevis = VIDEO_DATA_ROOT + 'mevis/train/'
 video_mevis_image_folder = data_root_mevis + 'JPEGImages'
 video_mevis_expression_file = data_root_mevis + 'meta_expressions.json'
 video_mevis_mask_file = data_root_mevis + 'mask_dict.json'
 
-data_root_refytvos = './data/video_datas/rvos/'
+data_root_refytvos = VIDEO_DATA_ROOT + 'rvos/'
 video_refytvos_image_folder = data_root_refytvos + 'train/JPEGImages/'
 video_refytvos_expression_file = data_root_refytvos + 'meta_expressions/train/meta_expressions.json'
 video_refytvos_mask_file = data_root_refytvos + 'mask_dict.pkl'
@@ -182,7 +181,7 @@ video_refytvos_dataset = dict(
 )
 
 ################### Video chat
-data_root_video_chatunivi = VIDEO_DATAS + 'video_vlm/video_chat/'
+data_root_video_chatunivi = VIDEO_DATA_ROOT + 'chat_univi/'
 video_chatunivi_image_folder = data_root_video_chatunivi + 'Activity_Videos/'
 video_chatunivi_json_file = data_root_video_chatunivi+ 'video_chat.json'
 
@@ -202,22 +201,24 @@ video_qa_dataset = dict(
 )
 
 ################## image chat
+LLAVA_ROOT = DATA_ROOT + 'llava_data/'
 llava_vqa_dataset = dict(
     type=LLaVADataset,
     tokenizer=tokenizer,
-    data_path='data/llava_data/LLaVA-Instruct-150K/llava_v1_5_mix665k.json',
+    data_path=LLAVA_ROOT + 'LLaVA-Instruct-150K/llava_v1_5_mix665k.json',
     prompt_template=prompt_template,
     special_tokens=special_tokens,
-    image_folder='data/llava_data/llava_images/',
+    image_folder=LLAVA_ROOT + 'llava_images/',
 )
 
 ################## image res
+RES_ROOT = DATA_ROOT + 'ref_seg/'
 refcoco_segm_dataset=dict(
     type=ReferSegmDataset,
     tokenizer=tokenizer,
     special_tokens=special_tokens,
     extra_image_processor=extra_image_processor,
-    data_root='data/ref_seg/refcoco',
+    data_root=RES_ROOT + 'refcoco',
     data_prefix=dict(img_path='coco2014/train2014/'),
     ann_file='instances.json',
     split_file='refs(unc).p',
@@ -230,7 +231,7 @@ refcoco_plus_segm_dataset=dict(
     tokenizer=tokenizer,
     special_tokens=special_tokens,
     extra_image_processor=extra_image_processor,
-    data_root='data/ref_seg/refcoco+',
+    data_root=RES_ROOT + 'refcoco+',
     data_prefix=dict(img_path='coco2014/train2014/'),
     ann_file='instances.json',
     split_file='refs(unc).p',
@@ -243,7 +244,7 @@ refcocog_segm_dataset=dict(
     tokenizer=tokenizer,
     special_tokens=special_tokens,
     extra_image_processor=extra_image_processor,
-    data_root='data/ref_seg/refcocog',
+    data_root= RES_ROOT + 'refcocog',
     data_prefix=dict(img_path='coco2014/train2014/'),
     ann_file='instances.json',
     split_file='refs(umd).p',
@@ -253,7 +254,7 @@ refcocog_segm_dataset=dict(
 )
 
 # image gcg datas
-glamm_data_root = './data/glamm_data/'
+glamm_data_root = DATA_ROOT + 'glamm_data/'
 
 refcocog_image_path = glamm_data_root + 'images/coco2014/train2014/'
 refcocog_ann_file = glamm_data_root + 'annotations/RefCOCOg_GCG_train.json'
@@ -320,7 +321,7 @@ glamm_flickr_dataset = dict(
 )
 
 # sam2 data
-data_sam2_folder = VIDEO_DATAS + 'segmentation_datasets/sam_v_full/'
+data_sam2_folder = VIDEO_DATA_ROOT + 'segmentation_datasets/sam_v_full/'
 data_sam2_expression_file = './whole_pesudo_cap_v3/sam_v_final_v3.json'
 
 video_sam2_dataset = dict(
@@ -340,12 +341,13 @@ video_sam2_dataset = dict(
 )
 
 # osprey
-data_osprey_file = VIDEO_DATAS + 'osprey-724k/Osprey-724K/osprey_conversation.json'
+OSPREY_ROOT = DATA_ROOT + "osprey-724k/"
+data_osprey_file = OSPREY_ROOT + 'Osprey-724K/osprey_conversation.json'
 data_osprey_image_folders = [
-    IMG_DATAS+ 'coco/train2014/',
-    IMG_DATAS + 'coco/val2014/',
-    IMG_DATAS + 'coco/train2017/',
-    IMG_DATAS + 'coco/val2017/',
+    OSPREY_ROOT + 'coco/train2014/',
+    OSPREY_ROOT + 'coco/val2014/',
+    OSPREY_ROOT + 'coco/train2017/',
+    OSPREY_ROOT + 'coco/val2017/',
 ]
 
 image_osprey_dataset = dict(
@@ -361,7 +363,7 @@ image_osprey_dataset = dict(
     special_tokens=special_tokens,
 )
 
-data_osprey_detail_description_file = VIDEO_DATAS + 'osprey-724k/Osprey-724K/osprey_detail_description.json'
+data_osprey_detail_description_file = OSPREY_ROOT + 'Osprey-724K/osprey_detail_description.json'
 image_osprey_description_dataset = dict(
     type=OspreyDescriptionDataset,
     image_folder=data_osprey_image_folders,
@@ -375,7 +377,7 @@ image_osprey_description_dataset = dict(
     special_tokens=special_tokens,
 )
 
-data_osprey_short_file = VIDEO_DATAS + 'osprey-724k/Osprey-724K/osprey_short_form.json'
+data_osprey_short_file = OSPREY_ROOT + 'Osprey-724K/osprey_short_form.json'
 image_osprey_short_dataset = dict(
     type=OspreyShortDescriptionDataset,
     image_folder=data_osprey_image_folders,
@@ -389,7 +391,7 @@ image_osprey_short_dataset = dict(
     special_tokens=special_tokens,
 )
 
-data_osprey_part_file = VIDEO_DATAS + 'osprey-724k/Osprey-724K/osprey_part_level.json'
+data_osprey_part_file = OSPREY_ROOT + 'Osprey-724K/osprey_part_level.json'
 image_osprey_part_dataset = dict(
     type=OspreyDataset,
     image_folder=data_osprey_image_folders,
@@ -403,7 +405,7 @@ image_osprey_part_dataset = dict(
     special_tokens=special_tokens,
 )
 
-data_osprey_positive_neg_file = VIDEO_DATAS + 'osprey-724k/Osprey-724K/osprey_lvis_positive_negative.json'
+data_osprey_positive_neg_file = OSPREY_ROOT + 'Osprey-724K/osprey_lvis_positive_negative.json'
 image_osprey_positive_neg_dataset = dict(
     type=OspreyDataset,
     image_folder=data_osprey_image_folders,
