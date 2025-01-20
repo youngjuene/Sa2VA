@@ -16,7 +16,7 @@
 ## Opensource progress
 
 - [x] Release Open-sourced training datasets.
-- [ ] Release Ref-SAM-v dataset.
+- [x] Release Ref-SAM-v dataset.
 - [x] Release evaluation code for each dataset. 
 - [x] Release 1B,4B,8B, 26B model.
 - [x] Release training code.
@@ -179,9 +179,12 @@ data/
 |   ├── llava_images
 |   ├── LLaVA-Instruct-150K
 |   ├── LLaVA-Pretrain
+├── ref_sav
+|   ├── sam_v_full
+|   ├── Ref-SAV.json
 ```
+`sam_v_full` is the SA-V dataset, which is not included in the download link. You can download it from [here](https://ai.meta.com/datasets/segment-anything-video/).
 </details>
-
 
 <details open>
 <summary>Training Script</summary>
