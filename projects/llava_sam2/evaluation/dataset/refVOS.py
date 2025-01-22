@@ -8,7 +8,7 @@ import copy
 
 from mmengine.dist import master_only
 
-from vlm.datasets.evaluation.base_eval_dataset import BaseEvalDataset
+from .base_eval_dataset import BaseEvalDataset
 
 SEG_PROMPT = "<image>\nPlease segment {}."
 

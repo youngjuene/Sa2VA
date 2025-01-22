@@ -12,8 +12,8 @@ import torch.utils.data
 import tqdm
 from transformers import AutoModel, AutoTokenizer
 
-from projects.llava_sam2.hf_evaluation.dataset import RefVOSDataset
-from projects.llava_sam2.hf_evaluation.utils import _init_dist_pytorch, _init_dist_slurm, get_dist_info, get_rank, collect_results_cpu, barrier
+from projects.llava_sam2.evaluation.dataset import RefVOSDataset
+from projects.llava_sam2.evaluation.utils import _init_dist_pytorch, _init_dist_slurm, get_dist_info, get_rank, collect_results_cpu
 
 import concurrent.futures
 from pycocotools import mask as cocomask
