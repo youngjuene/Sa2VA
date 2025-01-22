@@ -32,6 +32,7 @@ path = './pretrained/InternVL2_5-4B'
 pretrained_pth = None
 
 # Data
+template = "phi3_chat"
 prompt_template = PROMPT_TEMPLATE.phi3_chat
 max_length = 8192
 
