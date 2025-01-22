@@ -75,8 +75,8 @@ def main():
         all_state_dict_new[new_key] = all_state_dict[key]
 
     # build the hf format model
-    from projects.llava_sam2.sa2va_hf.configuration_sa2va_chat import Sa2VAChatConfig
-    from projects.llava_sam2.sa2va_hf.modeling_sa2va_chat import Sa2VAChatModel
+    from projects.llava_sam2.hf.models.configuration_sa2va_chat import Sa2VAChatConfig
+    from projects.llava_sam2.hf.models.modeling_sa2va_chat import Sa2VAChatModel
 
     internvl_config = Sa2VAChatConfig.from_pretrained(cfg.path)
     config_dict = internvl_config.to_dict()

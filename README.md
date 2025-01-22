@@ -195,6 +195,15 @@ Please run the following script to train:
 ```
 </details>
 
+<details open>
+<summary>Convert trained model to huggingface format</summary>
+
+Please run the following script to convert:
+```bash
+> python projects/llava_sam2/hf/convert_to_hf.py projects/llava_sam2/configs/sa2va_4b.py --pth-model PATH_TO_PTH_MODEL --save-path PATH_TO_SAVE_FOLDER
+```
+</details>
+
 
 ## References
 If you find this repository useful, please consider referring to he following paper:
