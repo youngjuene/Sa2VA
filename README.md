@@ -133,7 +133,7 @@ Answer: "The scene has a dark and mysterious atmosphere, with the men dressed in
 
 2. Install mmcv:
 ```bash
-> pip install mmcv==2.2.0 -f https://download.openmmlab.com/mmcv/dist/cu121/torch2.3/index.html
+> pip install mmcv==2.1.0 -f https://download.openmmlab.com/mmcv/dist/cu121/torch2.3/index.html
 ```
 
 3. Install other dependencies:
