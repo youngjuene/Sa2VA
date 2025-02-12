@@ -15,6 +15,7 @@
 
 ## Opensource progress
 
+- [ ] Release Qwen-VL models. (To be done)
 - [x] Release Open-sourced training datasets.
 - [x] Release Ref-SAM-v dataset.
 - [x] Release evaluation code for each dataset. 
