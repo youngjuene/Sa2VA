@@ -27,12 +27,12 @@ from projects.llava_sam2.models.preprocess.image_resize import DirectResize
 #                          PART 1  Settings                           #
 #######################################################################
 # Model
-path = './pretrained/InternVL2_5-4B'
+path = './pretrained/InternVL2_5-1B/'
 pretrained_pth = None
 
 # Data
-template = "phi3_chat"
-prompt_template = PROMPT_TEMPLATE.phi3_chat
+template = "qwen_chat"
+prompt_template = PROMPT_TEMPLATE.qwen_chat
 max_length = 8192
 
 # Scheduler & Optimizer

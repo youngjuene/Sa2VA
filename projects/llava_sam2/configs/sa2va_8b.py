@@ -27,12 +27,12 @@ from projects.llava_sam2.models.preprocess.image_resize import DirectResize
 #                          PART 1  Settings                           #
 #######################################################################
 # Model
-path = './pretrained/InternVL2_5-4B'
+path = './pretrained/InternVL2_5-8B'
 pretrained_pth = None
 
 # Data
-template = "phi3_chat"
-prompt_template = PROMPT_TEMPLATE.phi3_chat
+template = "internlm2_chat"
+prompt_template = PROMPT_TEMPLATE.internlm2_chat
 max_length = 8192
 
 # Scheduler & Optimizer
@@ -50,7 +50,7 @@ max_norm = 1  # grad clip
 warmup_ratio = 0.05
 
 # Save
-save_steps = 1000
+save_steps = 2000
 save_total_limit = 2  # Maximum checkpoints to keep (-1 means unlimited)
 
 special_tokens = ['[SEG]', '<p>', '</p>', '<vp>', '</vp>']

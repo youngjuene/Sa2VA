@@ -15,12 +15,12 @@
 
 ## Opensource progress
 
-- [ ] Release Qwen-VL models. (To be done)
+- [ ] Release Qwen-VL related models. (To be done)
 - [x] Release Open-sourced training datasets.
 - [x] Release Ref-SAM-v dataset.
 - [x] Release evaluation code for each dataset. 
 - [x] Release 1B,4B,8B, 26B model.
-- [x] Release training code.
+- [x] Release training code for 1b, 4b, 8b model.
 - [x] Release inference and test code.
 - [x] Release demo code. 
 
@@ -132,7 +132,7 @@ Answer: "The scene has a dark and mysterious atmosphere, with the men dressed in
 > conda install pytorch==2.3.1 torchvision==0.18.1 pytorch-cuda=12.1 cuda -c pytorch  -c "nvidia/label/cuda-12.1.0" -c "nvidia/label/cuda-12.1.1"
 ```
 
-2. Install mmcv:
+2. Install mmcv, we use 2.1.0 as default version:
 ```bash
 > pip install mmcv==2.1.0 -f https://download.openmmlab.com/mmcv/dist/cu121/torch2.3/index.html
 ```
@@ -143,14 +143,25 @@ Answer: "The scene has a dark and mysterious atmosphere, with the men dressed in
 ```
 </details>
 
-<details open>
+Please make sure using the correct versions of transformers and peft.
+
+<
 <summary>Pretrained Model Preparation</summary>
 
 You are expected to download the following pretrained models and place them in the `./pretrained` directory:
 - [sam2_hiera_large.pt](https://huggingface.co/facebook/sam2-hiera-large)
 - [InternVL2_5-4B](https://huggingface.co/OpenGVLab/InternVL2_5-4B)
 
-</details>
+You can download the remaining models from InternVL2.5 [huggingface collections](https://huggingface.co/collections/OpenGVLab/internvl25-673e1019b66e2218f68d7c1c). 
+
+```
+./ # project root
+pretrained/
+├── sam2_hiera_large.pt
+├── InternVL2_5-1B
+├── InternVL2_5-4B
+```
+
 
 <details open>
 <summary>Data Preparation</summary>
@@ -168,8 +179,16 @@ data/
 ├── video_datas
 |   ├── revos
 |   ├── mevis
-|   ├── revos
 |   └── davis17
+|   └── chat_univi # video-chat data
+|   └── sam_v_full # please download this from sam-2 offical repp.
+|   └── sam_v_final_v3.json
+├── ref_seg
+|   ├── refclef
+|   ├── refcoco
+|   ├── refcoco+
+|   ├── refcocog
+|   ├── 
 ├── glamm_data
 |   ├── images
 |   ├── annotations
@@ -180,9 +199,7 @@ data/
 |   ├── llava_images
 |   ├── LLaVA-Instruct-150K
 |   ├── LLaVA-Pretrain
-├── ref_sav
-|   ├── sam_v_full
-|   ├── Ref-SAV.json
+
 ```
 `sam_v_full` is the SA-V dataset, which is not included in the download link. You can download it from [here](https://ai.meta.com/datasets/segment-anything-video/).
 </details>
@@ -190,7 +207,7 @@ data/
 <details open>
 <summary>Training Script</summary>
 
-Please run the following script to train:
+Please run the following script to train using 8 GPUS, we suggest using at least 8 A100 GPUs:
 ```bash
 > bash tools/dist.sh train projects/llava_sam2/configs/sa2va_4b.py 8
 ```
