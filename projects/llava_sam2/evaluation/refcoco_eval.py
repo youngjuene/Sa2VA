@@ -104,7 +104,7 @@ def main():
                 print("No seg pred !!!")
                 pred_masks.append(None)
             else:
-                _ret_mask = pred_mask[0].cpu().numpy()
+                _ret_mask = pred_mask[0]
                 _ret_mask = mask_to_rle(_ret_mask)
                 pred_masks.append(_ret_mask)
 
