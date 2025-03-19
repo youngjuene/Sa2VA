@@ -13,6 +13,13 @@
 
 ![Teaser](assets/images/teaser.jpg)
 
+
+
+## News
+
+We plan to release the Qwen-VL-based Sa2VA model next month! Please stay tuned.
+
+
 ## Opensource progress
 
 - [ ] Release Qwen-VL related models. (To be done)
