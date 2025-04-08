@@ -17,7 +17,8 @@
 
 ## News
 
-We plan to release the Qwen-VL-based Sa2VA model next month! Please stay tuned.
+- [x] Sa2VA serves as the first and third solutions for 4th PVUW Workshop@CVPR 2025.
+- [x] We plan to release the Qwen-VL-based Sa2VA model for the next version! Please stay tuned.
 
 
 ## Opensource progress
