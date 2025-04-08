@@ -9,7 +9,7 @@
 
 <sup>1</sup>UC Merced&emsp;&emsp;&emsp;&emsp;<sup>2</sup>ByteDance Seed&emsp;&emsp;&emsp;&emsp;<sup>3</sup>WHU&emsp;&emsp;&emsp;&emsp;<sup>4</sup>PKU
 
-&dagger; project lead&emsp;* the first three authors equally contribute to the work.
+&dagger; project lead&emsp;* The first three authors equally contribute to the work.
 
 ![Teaser](assets/images/teaser.jpg)
 
@@ -17,8 +17,9 @@
 
 ## News
 
-- [x] Sa2VA serves as the first and third solutions for 4th PVUW Workshop@CVPR 2025.
-- [x] We plan to release the Qwen-VL-based Sa2VA model for the next version! Please stay tuned.
+- [x] Sa2VA serves as the first and third solutions for 4th PVUW Workshop@CVPR 2025! [the first solution report](https://arxiv.org/pdf/2504.05178), [the third solution report](https://arxiv.org/abs/2504.00476).
+      
+- [x] We plan to release the Qwen-VL-based Sa2VA model for the next version! Please stay tuned!
 
 
 ## Opensource progress
