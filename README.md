@@ -17,6 +17,8 @@
 
 ## News
 
+- [x] Check out our recent works on pixel-LLM using one transformer, Pixel-SAIL[arxiv](https://arxiv.org/abs/2504.10465).
+
 - [x] Sa2VA serves as the first and third solutions for 4th PVUW Workshop@CVPR 2025! [the first solution report](https://arxiv.org/pdf/2504.05178), [the third solution report](https://arxiv.org/abs/2504.00476).
       
 - [x] We plan to release the Qwen-VL-based Sa2VA model for the next version! Please stay tuned!
@@ -24,6 +26,7 @@
 
 ## Opensource progress
 
+- [ ] Release Pixel-SAIL models and code. (To be done)
 - [ ] Release Qwen-VL related models. (To be done)
 - [x] Release Open-sourced training datasets.
 - [x] Release Ref-SAM-v dataset.
@@ -235,6 +238,13 @@ Please run the following script to convert:
 ## References
 If you find this repository useful, please consider referring to he following paper:
 ```
+@article{pixel_sail,
+  title={Sa2VA: Marrying SAM2 with LLaVA for Dense Grounded Understanding of Images and Videos},
+  author={Zhang, Tao and Li, Xiangtai and Huang, Zilong  and Li, Yanwei and Lei, Weixian and Deng, Xueqing and Chen, Shihao and Ji, Shunping and  and Feng, Jiashi},
+  journal={arXiv},
+  year={2025}
+}
+
 @article{sa2va,
   title={Sa2VA: Marrying SAM2 with LLaVA for Dense Grounded Understanding of Images and Videos},
   author={Yuan, Haobo and Li, Xiangtai and Zhang, Tao and Huang, Zilong and Xu, Shilin and Ji, Shunping and Tong, Yunhai and Qi, Lu and Feng, Jiashi and Yang, Ming-Hsuan},
