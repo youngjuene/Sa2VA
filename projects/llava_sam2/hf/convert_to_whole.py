@@ -19,15 +19,12 @@ def convert_dict2config_dict(input):
             input[key] = convert_dict2config_dict(input[key])
     return input
 
-TORCH_DTYPE_MAP = dict(
-    fp16=torch.float16, bf16=torch.bfloat16, fp32=torch.float32, auto='auto')
-
 def parse_args():
     parser = argparse.ArgumentParser(description='toHF script')
     parser.add_argument('config', help='config file name or path.')
     parser.add_argument('pth_model', help='pth model file')
     parser.add_argument(
-        '--save-path', type=str, default='./work_dirs/hf_model', help='save folder name')
+        '--save-path', type=str, default=None, help='save folder name')
     args = parser.parse_args()
     return args
 
@@ -61,47 +58,14 @@ def main():
     print(f'Load PTH model from {args.pth_model}')
 
     model._merge_lora()
-    model.mllm.transfer_to_hf = True
-
     all_state_dict = model.all_state_dict()
 
-    name_map = {'mllm.model.': '', '.gamma': '.g_weight'}
 
-    all_state_dict_new = {}
-    for key in all_state_dict.keys():
-        new_key = copy.deepcopy(key)
-        for _text in name_map.keys():
-            new_key = new_key.replace(_text, name_map[_text])
-        all_state_dict_new[new_key] = all_state_dict[key]
-
-    # build the hf format model
-    from projects.llava_sam2.hf.models.configuration_sa2va_chat import Sa2VAChatConfig
-    from projects.llava_sam2.hf.models.modeling_sa2va_chat import Sa2VAChatModel
-
-    internvl_config = Sa2VAChatConfig.from_pretrained(cfg.path)
-    config_dict = internvl_config.to_dict()
-    config_dict['auto_map'] = \
-        {'AutoConfig': 'configuration_sa2va_chat.Sa2VAChatConfig',
-         'AutoModel': 'modeling_sa2va_chat.Sa2VAChatModel',
-         'AutoModelForCausalLM': 'modeling_sa2va_chat.Sa2VAChatModel'}
-
-    config_dict["llm_config"]["vocab_size"] = len(model.tokenizer)
-    config_dict["template"] = cfg.template
-    sa2va_hf_config = Sa2VAChatConfig(
-        **config_dict
-    )
-    hf_sa2va_model = Sa2VAChatModel(
-        sa2va_hf_config, vision_model=model.mllm.model.vision_model,
-        language_model=model.mllm.model.language_model,
-    )
-    hf_sa2va_model.load_state_dict(all_state_dict_new)
-
-    hf_sa2va_model.save_pretrained(args.save_path)
-    model.tokenizer.save_pretrained(args.save_path)
-    print(f"Save the hf model into {args.save_path}")
-
-    # copy the files
-    os.system(f"cp -pr ./projects/llava_sam2/hf/models/* {args.save_path}")
+    if args.save_path is None:
+        save_path = args.pth_model.replace('.pth', '_whole.pth')
+    
+    torch.save(all_state_dict, save_path)
+    print(f'Save whole model to {save_path}')
 
 if __name__ == '__main__':
     main()
