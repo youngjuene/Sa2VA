@@ -239,7 +239,7 @@ Please run the following script to convert:
 If you find this repository useful, please consider referring to he following paper:
 ```
 @article{pixel_sail,
-  title={Sa2VA: Marrying SAM2 with LLaVA for Dense Grounded Understanding of Images and Videos},
+  title={Pixel-SAIL: Single Transformer For Pixel-Grounded Understanding},
   author={Zhang, Tao and Li, Xiangtai and Huang, Zilong  and Li, Yanwei and Lei, Weixian and Deng, Xueqing and Chen, Shihao and Ji, Shunping and  and Feng, Jiashi},
   journal={arXiv},
   year={2025}
