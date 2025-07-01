@@ -17,6 +17,8 @@
 
 ## News
 
+- [x] Pixel-SAIL and Qwen-VL like models will be related before the end of July!!
+
 - [x] Check out our recent works on pixel-LLM using one transformer, Pixel-SAIL[arxiv](https://arxiv.org/abs/2504.10465).
 
 - [x] Sa2VA serves as the first and third solutions for 4th PVUW Workshop@CVPR 2025! [the first solution report](https://arxiv.org/pdf/2504.05178), [the third solution report](https://arxiv.org/abs/2504.00476).
@@ -236,7 +238,7 @@ Please run the following script to convert:
 
 
 ## References
-If you find this repository useful, please consider referring to he following paper:
+If you find this repository useful, please consider referring to the following paper:
 ```
 @article{pixel_sail,
   title={Pixel-SAIL: Single Transformer For Pixel-Grounded Understanding},
